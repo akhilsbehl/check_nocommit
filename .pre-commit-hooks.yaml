@@ -1,0 +1,6 @@
+- id: check_nocommit
+  name: check_nocommit
+  description: This hook checks for '#NOCOMMIT' messages in python and bash files.
+  entry: check_nocommit.checker:main
+  language: python
+  types: [python, bash]

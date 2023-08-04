@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='check_nocommit',
-    version='0.1.0',
+    version='0.1.1',
     description='A pre-commit hook to check for #NOCOMMIT in text files.',
     author='Akhil Behl',
     author_email='akhilsbehl@gmail.com',

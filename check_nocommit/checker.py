@@ -17,9 +17,9 @@ def check_for_nocommit(filename: str) -> List[Tuple[int, str]]:
     with open(filename) as file:
         in_nocommit_block = False
         for i, line in enumerate(file, start=1):
-            if re.search(r"#NOCOMMIT: START", line):
+            if re.search(r"#NOCOMMIT:START", line):
                 in_nocommit_block = True
-            if re.search(r"#NOCOMMIT: END", line):
+            if re.search(r"#NOCOMMIT:END", line):
                 in_nocommit_block = False
             if re.search(r"#NOCOMMIT", line) or in_nocommit_block:
                 results.append((i, line.strip()))

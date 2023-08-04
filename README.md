@@ -10,7 +10,7 @@ For pre-commit: see [https://github.com/pre-commit/pre-commit](https://github.co
 ```yaml
 repos:
   - repo: https://github.com/akhilsbehl/check_nocommit
-    rev: v0.1.1
+    rev: v0.1.2
     hooks:
       - id: check_nocommit
 ```

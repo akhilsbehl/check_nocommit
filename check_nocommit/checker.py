@@ -30,7 +30,6 @@ def main() -> int:
     args = parse_args()
 
     filenames = args.filenames if args.filenames else []
-    print(filenames)
 
     any_nocommit_found = False
     for filename in filenames:

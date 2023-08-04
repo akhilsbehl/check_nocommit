@@ -12,12 +12,6 @@ def parse_args() -> argparse.Namespace:
     return parser.parse_args()
 
 
-def get_staged_files() -> List[str]:
-    repo = git.Repo(search_parent_directories=True)
-    staged_files = [item.a_path for item in repo.index.diff("HEAD")]
-    return staged_files
-
-
 def check_for_nocommit(filename: str) -> List[Tuple[int, str]]:
     results = []
     with open(filename) as file:
@@ -35,7 +29,8 @@ def check_for_nocommit(filename: str) -> List[Tuple[int, str]]:
 def main() -> int:
     args = parse_args()
 
-    filenames = args.filenames if args.filenames else get_staged_files()
+    filenames = args.filenames if args.filenames else []
+    print(filenames)
 
     any_nocommit_found = False
     for filename in filenames:

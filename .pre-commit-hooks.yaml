@@ -1,6 +1,6 @@
-- id: check_nocommit
-  name: check_nocommit
-  description: This hook checks for '#NOCOMMIT' messages in python and bash files.
-  entry: check_nocommit.checker:main
+- id: check-nocommit
+  name: check for nocommit reminders
+  description: This hook checks for '#NOCOMMIT' messages in any text files
+  entry: check-nocommit
   language: python
-  types: [python, bash]
+  types: [text]

@@ -1,5 +1,5 @@
 # check_nocommit
-check_nocommit is a pre-commit hook designed to check for '#NOCOMMIT' messages in Python and Bash files (inferred using file extensions only).
+check_nocommit is a pre-commit hook designed to check for '#NOCOMMIT' messages in text files.
 
 It's a simple utility to leave yourself reminders not to check-in temporary edits into your repo that you would definitely be reminded of.
 
